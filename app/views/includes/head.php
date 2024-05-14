@@ -3,7 +3,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- LIBRERÍAS -->
+    <!-- Favicon -->
+    <link rel="shortcut icon" href=<?php echo FROM_PAGES_TO_IMAGES . "/Logo-solo-agost.png" ?> />
+
+    <!-- Bibliotecas -->
     <link rel="stylesheet" type="text/css" href="../../lib/bootstrap/css/bootstrap.css" />
     <script src="../../lib/jquery-3.6.1.min.js"></script>
     <script src="../../lib/plotly-2.14.0.min.js"></script>

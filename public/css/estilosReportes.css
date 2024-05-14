@@ -20,13 +20,10 @@ main {
     background-color: white;
     border-radius: 10px;
     border: 0.001px solid rgba(128, 128, 128, 0.3);
-    margin-top: -8px;
-    margin-left: 280px;
-    margin-right: 280px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    margin: -8px 280px 0 280px;
+    padding: 10px 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     font-size: 20px;
     color: #1f77b4;
@@ -34,40 +31,40 @@ main {
 .etiqueta-select {
     font-weight: bold;
     margin-right: 20px;
-    color: #0b2236;
+    color: #0e2a47;
 }
 
 input[type="date"] {
-    /* background-color: #0B2236 ;*/
-    color: #0b2236;
+    /* background-color: #0E2A47 ;*/
+    color: #0e2a47;
     font-weight: bold;
     border: 2px solid;
     border-radius: 10px;
-    border-color: #0b2236;
+    border-color: #0e2a47;
     padding: 5px;
     padding-left: 40px;
-    outline: #0b2236;
+    outline: #0e2a47;
 }
 
 input[type="month"] {
-    /* background-color: #0B2236 ;*/
-    color: #0b2236;
+    /* background-color: #0E2A47 ;*/
+    color: #0e2a47;
     font-weight: bold;
     border: 2px solid;
     border-radius: 10px;
-    border-color: #0b2236;
+    border-color: #0e2a47;
     padding: 5px;
-    outline: #0b2236;
+    outline: #0e2a47;
 }
 
 .calendar-picker-indicator {
-    color: #0b2236;
+    color: #0e2a47;
 }
 .consulta {
     background-color: white;
-    color: #0b2236;
+    color: #0e2a47;
     margin-left: 5px;
-    margin-right: 5px;
+    margin-right: 200px;
     border-radius: 20px;
     font-weight: 800;
     border: 3px solid white;
@@ -75,7 +72,19 @@ input[type="month"] {
     padding: 2px 15px;
 }
 .consulta:hover {
-    background-color: #0b2236;
+    background-color: #0e2a47;
+    color: white;
+}
+.boton-reporte {
+    border: 2px solid #1eaa96;
+    background-color: white;
+    color: #1eaa96;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 2px 15px;
+}
+.boton-reporte:hover {
+    background-color: #1eaa96;
     color: white;
 }
 

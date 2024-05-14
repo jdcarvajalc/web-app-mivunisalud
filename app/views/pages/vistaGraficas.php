@@ -4,15 +4,14 @@
 <html lang="en">
 
 <head>
-  <?php require_once '../includes/head.php' ?>
+  <?php include '../includes/head.php' ?>
   <title>Gráficas</title>
-  <link rel="shortcut icon" href=<?php echo FROM_PAGES_TO_IMAGES . "/Logo-solo-agost.png" ?> />
   <link rel="stylesheet" href="<?php echo FROM_PAGES_TO_STYLES . '/estilosGraficas.css' ?>" />
 </head>
 
 <body>
 
-  <?php require_once '../includes/navbar.php' ?>
+  <?php include '../includes/navbar.php' ?>
 
   <main>
     <section class="contenedor-mes">
@@ -46,7 +45,7 @@
       </div>
     </section>
 
-    <section class="cont">
+    <section class="cont" style="margin-top: -40px;">
       <div id="contenido-div1" class="card">
         <div id="cargaLineal" class="mi-grafica"></div>
       </div>
