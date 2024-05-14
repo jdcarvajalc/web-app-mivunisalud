@@ -17,15 +17,14 @@
 
     <section class="seccionTitulo">
       <br />
-      <h1 style="color: #E40C7B; font-weight: bold; text-transform: uppercase; margin-top: -30px">
+      <h1>
         ¿Qué tiene a su disposición?
       </h1>
       <br />
-      <!--<hr style="width: 80%; margin: auto; color: #AF0B19;">-->
     </section>
 
-    <section class="seccionTarjetasInformativas" style="margin-top: -20px; margin-bottom: 30px;">
-      <div id="cardTablas" class="card" style="width: 20rem">
+    <section class="seccionTarjetasInformativas">
+      <div id="cardTablas" class="card">
         <img src=<?php echo FROM_PAGES_TO_IMAGES . "/tiempo-real.png" ?> class="card-img-top" alt="iconoGraficas" />
         <div class="card-body">
           <h5 class="card-title" style="font-weight: bold; color: #E40C7B;">REPORTES</h5>
@@ -36,7 +35,7 @@
           </p>
         </div>
       </div>
-      <div id="cardGraficas" class="card" style="width: 20rem; box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;">
+      <div id="cardGraficas" class="card">
         <img src=<?php echo FROM_PAGES_TO_IMAGES . "/iconoGraficas.png" ?> class="card-img-top" alt="iconoGraficas" />
         <div class="card-body">
           <h5 class="card-title" style="font-weight: bold; color: #E40C7B">GRÁFICAS</h5>

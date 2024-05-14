@@ -23,11 +23,16 @@ main {
 }
 .seccionTitulo h1 {
     padding-top: 40px;
+    color: #e40c7b;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: -30px;
 }
 
 /* Tarjetas informativas */
 .seccionTarjetasInformativas {
-    margin: 0;
+    margin-top: -20px;
+    margin-bottom: 30px;
     padding: 50px;
     display: flex;
     flex-flow: row;
@@ -46,6 +51,7 @@ main {
         rgba(0, 0, 0, 0.22) 0px 15px 12px;
 
     color: #345070;
+    width: 20rem;
 }
 #cardGraficas {
     background-color: white;
@@ -53,6 +59,9 @@ main {
         rgba(0, 0, 0, 0.22) 0px 15px 12px;
     color: #345070;
     align-items: center;
+    width: 20rem;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+        rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .secccionMapaGoogleUnidadDeSalud {
