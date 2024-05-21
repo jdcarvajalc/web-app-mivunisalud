@@ -9,3 +9,5 @@
     <a href="https://www.php.net/manual/es/intro-whatis.php"><img alt="php version" src="https://img.shields.io/badge/php-v8.1-7377AD"></a>
 </p>
 
+## 🛠️ Stack 
+
