@@ -1,21 +1,27 @@
-<?php require_once '../../config/config.php' ?>
-
+<?php
+session_start();
+$b_url = BASE_URL;
+if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
+  header("location: $b_url/login");
+  exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <?php include '../includes/head.php' ?>
+  <?php include 'app/views/includes/head.php' ?>
   <title>Reportes</title>
   <link rel="stylesheet" href="<?php echo FROM_PAGES_TO_STYLES . '/estilosReportes.css' ?>" />
 </head>
 
 <body>
-  <?php include '../includes/navbar.php' ?>
+  <?php include 'app/views/includes/navbar.php' ?>
 
   <main>
 
     <section class="contenedor-mes">
-      <form action="vistaReportes.php" method="POST">
+      <form action="<?php echo BASE_URL . '/reports' ?>" method="POST">
         <label for="mes-seleccionado" class="etiqueta-select">Seleccione una fecha: </label>
         <input type="month" name="mes" class="mes-seleccionado" id="mes-seleccionado" value="">
         <button id="consultar" type="submit" class="consulta">
