@@ -28,7 +28,7 @@
         </a>
       </li>
       <li>
-        <a id="cierre" href="<?php echo BASE_URL . '/login' ?>">
+        <a id="cierre" href="<?php echo BASE_URL . '/logout' ?>">
           <i class="fa-solid fa-user-xmark"></i>
           Cerrar Sesión
         </a>

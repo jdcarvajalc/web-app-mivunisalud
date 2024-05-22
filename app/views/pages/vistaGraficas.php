@@ -1,3 +1,11 @@
+<?php
+session_start();
+$b_url = BASE_URL;
+if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
+  header("location: $b_url/login");
+  exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 

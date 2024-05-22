@@ -9,14 +9,6 @@ switch ($page) {
     case 'login':
         include 'app/views/pages/vistaInicioSesion.php';
         break;
-    case 'authenticate':
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $username = trim($_POST['username']);
-            $password = trim($_POST['password']);
-        } else {
-            header("location: /login");
-        }
-        break;
     case 'home':
         include 'app/views/pages/vistaInicio.php';
         break;
@@ -27,6 +19,7 @@ switch ($page) {
         include 'app/views/pages/vistaGraficas.php';
         break;
     case 'logout':
+        require_once 'app/controllers/controladorCierreSesion.php';
         break;
     default:
         header("location: /login");
