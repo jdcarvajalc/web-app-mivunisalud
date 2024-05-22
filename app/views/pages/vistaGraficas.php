@@ -13,7 +13,7 @@
 
   <main>
     <section class="contenedor-mes">
-      <form action="vistaGraficas.php" method="POST">
+      <form action="<?php echo BASE_URL . '/graphs' ?>" method="POST">
 
         <label for="mes-seleccionado" class="etiqueta-select">Seleccione una fecha: </label>
 
