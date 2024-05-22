@@ -1,3 +1,2 @@
-<?php  
-    require '../models/modeloRegistroDatos.php';
-?>
+<?php
+require '../models/modeloRegistroDatos.php';
