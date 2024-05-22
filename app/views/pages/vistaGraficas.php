@@ -1,17 +1,15 @@
-<?php require_once '../../config/config.php' ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <?php include '../includes/head.php' ?>
+  <?php include 'app/views/includes/head.php' ?>
   <title>Gráficas</title>
   <link rel="stylesheet" href="<?php echo FROM_PAGES_TO_STYLES . '/estilosGraficas.css' ?>" />
 </head>
 
 <body>
 
-  <?php include '../includes/navbar.php' ?>
+  <?php include 'app/views/includes/navbar.php' ?>
 
   <main>
     <section class="contenedor-mes">

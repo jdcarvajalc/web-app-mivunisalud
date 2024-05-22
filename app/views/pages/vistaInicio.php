@@ -1,10 +1,8 @@
-<?php require_once '../../config/config.php' ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <?php include '../includes/head.php' ?>
+  <?php include 'app/includes/head.php' ?>
   <title>Inicio</title>
   <link rel="stylesheet" href="../../../public/css/estilosInicio.css" />
 </head>
