@@ -1,6 +1,4 @@
 <?php
-// index.php
-// require_once 'controllers/AuthenticateController.php';
 require_once 'app/config/config.php';
 
 $page = isset($_GET['page']) ? $_GET['page'] : 'login';
