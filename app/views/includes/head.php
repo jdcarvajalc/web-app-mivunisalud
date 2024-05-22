@@ -4,12 +4,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href=<?php echo FROM_PAGES_TO_IMAGES . "/Logo-solo-agost.png" ?> />
+    <link rel="shortcut icon" href=<?php echo "public/images/Logo-solo-agost.png" ?> />
 
     <!-- Bibliotecas -->
-    <link rel="stylesheet" type="text/css" href="../../lib/bootstrap/css/bootstrap.css" />
-    <script src="../../lib/jquery-3.6.1.min.js"></script>
-    <script src="../../lib/plotly-2.14.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="app/lib/bootstrap/css/bootstrap.css" />
+    <script src="app/lib/jquery-3.6.1.min.js"></script>
+    <script src="app/lib/plotly-2.14.0.min.js"></script>
     <script src="https://kit.fontawesome.com/00121ead02.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>

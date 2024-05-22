@@ -13,4 +13,4 @@ define('FROM_PAGES_TO_IMAGES', 'public/images');
 define('FROM_PAGES_TO_STYLES', 'public/css');
 define('FROM_PAGES_TO_JS', 'public/js');
 define('FROM_PAGES_TO_CONTROLLERS', 'app/controllers');
-define('FROM_PAGES_TO_MODELS', 'models');
+define('FROM_PAGES_TO_MODELS', 'app/models');

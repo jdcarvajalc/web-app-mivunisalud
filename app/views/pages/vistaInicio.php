@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-  <?php include 'app/includes/head.php' ?>
+  <?php include 'app/views/includes/head.php' ?>
   <title>Inicio</title>
-  <link rel="stylesheet" href="../../../public/css/estilosInicio.css" />
+  <link rel="stylesheet" href="<?php echo FROM_PAGES_TO_STYLES . '/estilosInicio.css' ?>" />
 </head>
 
 <body>
 
-  <?php include '../includes/navbar.php' ?>
+  <?php include 'app/views/includes/navbar.php' ?>
 
   <main id="seccionMain">
 
