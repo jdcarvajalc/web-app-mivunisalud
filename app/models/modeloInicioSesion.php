@@ -1,18 +1,20 @@
 <?php 
-    require_once '../config/config.php';
+require_once '../config/config.php';
 
-    $conn = mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME); 
+$conn = mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME); 
 
-    $usuario = $_POST['user'];
-    $clave = $_POST['pass'];
+$usuario = $_POST['user'];
+$clave = $_POST['pass'];
 
-    $query = "SELECT COUNT(*)
-              AS contar
-              FROM users
-              WHERE username = '$usuario' 
-              AND password = '$clave'";
+$query = "SELECT COUNT(*)
+          AS contar
+          FROM users
+          WHERE username = '$usuario' 
+          AND password = '$clave'";
 
-    $consulta = mysqli_query($conn,$query);
+$consulta = mysqli_query($conn,$query);
 
-    $array = mysqli_fetch_array($consulta);
-?>
+$array = mysqli_fetch_array($consulta);
+
+// Cerrar la conexión
+mysqli_close($conn);

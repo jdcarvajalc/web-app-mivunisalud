@@ -20,7 +20,7 @@ main {
     background-color: white;
     border-radius: 10px;
     border: 0.001px solid rgba(128, 128, 128, 0.3);
-    margin: -8px 280px 0 280px;
+    margin: -8px 50px 0 50px;
     padding: 10px 0;
     display: flex;
     justify-content: center;
@@ -60,6 +60,17 @@ input[type="month"] {
 .calendar-picker-indicator {
     color: #0e2a47;
 }
+
+select {
+    margin-left: 20px;
+    color: #0e2a47;
+    font-weight: bold;
+    border: 2px solid;
+    border-radius: 10px;
+    border-color: #0e2a47;
+    padding: 7.5px;
+}
+
 .consulta {
     background-color: white;
     color: #0e2a47;

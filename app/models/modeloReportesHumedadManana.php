@@ -21,3 +21,6 @@ while ($ver = mysqli_fetch_row($result)) {
 	$valoresY_Humedad_m[] = $ver[1];
 	$valoresX_Humedad_m[] = $ver[2];
 }
+
+// Cerrar la conexión
+mysqli_close($conn);

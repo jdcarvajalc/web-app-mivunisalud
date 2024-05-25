@@ -24,6 +24,7 @@ if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
       <form action="<?php echo BASE_URL . '/reports' ?>" method="POST">
         <label for="mes-seleccionado" class="etiqueta-select">Seleccione una fecha: </label>
         <input type="month" name="mes" class="mes-seleccionado" id="mes-seleccionado" value="">
+        <select class="select"><option value="" hidden>Seleccione un área</option></select>
         <button id="consultar" type="submit" class="consulta">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>

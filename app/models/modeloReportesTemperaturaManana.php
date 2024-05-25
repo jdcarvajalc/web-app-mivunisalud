@@ -27,3 +27,6 @@ while ($ver = mysqli_fetch_row($result)) {
 	$valoresY_Temperatura_m[] = $ver[1];
 	$valoresX_Temperatura_m[] = $ver[2];
 }
+
+// Cerrar la conexión
+mysqli_close($conn);

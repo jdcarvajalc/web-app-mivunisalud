@@ -14,5 +14,12 @@ $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME); // Aquí se hace l
 
 $sql1 = "INSERT into registros (id, temp, hum, fecha, hora) VALUES (NULL, '$temp', '$hum', '$date', '$timestamp')"; // Aquí se ingresa el valor recibido a la base de datos.
 
-$result1 = $mysqli->query($sql1);
-echo "result es..." . $result1; // Si result es 1, quiere decir que el ingreso a la base de datos fue correcto.;
+// Ejecutar la consulta y verificar si fue exitosa
+if ($mysqli->query($sql1) === TRUE) {
+    echo "Registro exitoso";
+} else {
+    echo "Error: " . $mysqli->error;
+}
+
+// Cerrar la conexión
+$mysqli->close();
