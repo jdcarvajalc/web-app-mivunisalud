@@ -59,6 +59,14 @@ if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
       <div id="contenido-div2" class="card">
         <div id="cargaLineal2" class="mi-grafica"></div>
       </div>
+
+      <div id="contenido-div3" class="card">
+        <div id="cargaLineal3" class="mi-grafica"></div>
+      </div>
+
+      <div id="contenido-div" class="card">
+        <div id="cargaLineal" class="mi-grafica"></div>
+      </div>
     </section>
   </main>
 </body>
