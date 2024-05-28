@@ -13,7 +13,7 @@ switch ($page) {
     case 'reports':
         include 'app/views/pages/vistaReportes.php';
         break;
-    case 'graphs':
+    case 'charts':
         include 'app/views/pages/vistaGraficas.php';
         break;
     case 'logout':
