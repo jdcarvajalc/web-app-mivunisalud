@@ -21,7 +21,7 @@ if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
 
   <main>
     <section class="contenedor-mes">
-      <form action="<?php echo BASE_URL . '/graphs' ?>" method="POST">
+      <form action="<?php echo BASE_URL . '/charts' ?>" method="POST">
 
         <label for="mes-seleccionado" class="etiqueta-select">Seleccione una fecha: </label>
 
