@@ -22,7 +22,7 @@
         </a>
       </li>
       <li>
-        <a href="<?php echo BASE_URL . '/graphs' ?>">
+        <a href="<?php echo BASE_URL . '/charts' ?>">
           <i class="fa-sharp fa-solid fa-chart-line"></i>
           Gráficas
         </a>
