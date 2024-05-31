@@ -68,7 +68,7 @@ if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
         </h1>
       </div>
       <div style="width: 100%">
-        <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Popay%C3%A1n,%20Cauca+(Unidad%20Agost+)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/car-satnav-gps/">GPS car tracker</a></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.1667455452416!2d-76.59851372552951!3d2.451513557045925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3003004712671d%3A0x1b0b64f9468ad50e!2sUnidad%20Medica%20AGOST%2B%20S.A.S.!5e0!3m2!1ses-419!2sco!4v1717161887344!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
 
