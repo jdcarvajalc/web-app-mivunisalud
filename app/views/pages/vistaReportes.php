@@ -23,7 +23,7 @@ if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
     <section class="contenedor-mes">
       <form action="<?php echo BASE_URL . '/reports' ?>" method="POST">
         <label for="mes-seleccionado" class="etiqueta-select">Seleccione una fecha: </label>
-        <input type="month" name="mes" class="mes-seleccionado" id="mes-seleccionado" value="">
+        <input type="month" name="mes" class="mes-seleccionado" id="mes-seleccionado" value="<?php echo date('Y-m'); ?>">
         <select class="select" name="area">
           <option value="1" hidden>Seleccione un área</option>
           <option value="1">Almacenamiento</option>

@@ -25,7 +25,7 @@ if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
 
         <label for="mes-seleccionado" class="etiqueta-select">Seleccione una fecha: </label>
 
-        <input type="date" name="dia" class="mes-seleccionado" id="mes-seleccionado" value="">
+        <input type="date" name="dia" class="mes-seleccionado" id="mes-seleccionado" value="<?php echo date('Y-m-d'); ?>">
         <select class="select" name="area">
           <option value="1" hidden>Seleccione un área</option>
           <option value="1">Almacenamiento</option>
