@@ -99,7 +99,7 @@ $datosY_Humedad_t = json_encode($valoresY_Humedad_t);
 </script>
 
 <!-- Generar PDF -->
-<script src=<?php echo FROM_PAGES_TO_JS . "/2generar2-PDF.js" ?>></script>
+<script src=<?php echo FROM_PAGES_TO_JS . "/generarPDF.js" ?>></script>
 
 <script>
     var areaSeleccionada;
