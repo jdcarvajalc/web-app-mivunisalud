@@ -10,11 +10,12 @@ $diaSeleccionado = date('d', strtotime($fecha));
 $mesSeleccionado = date('m', strtotime($fecha));
 $anioSeleccionado = date('Y', strtotime($fecha));
 
-$sql = "SELECT hora,temp,fecha 
+$sql = "SELECT hora,temp,fecha,area 
 			FROM registros 
 			WHERE DAY(fecha) = '$diaSeleccionado'
 			AND MONTH(fecha) = '$mesSeleccionado'
 			AND YEAR(fecha) = '$anioSeleccionado'
+			AND area = '$area'
 			AND (
 					(TIME(hora) BETWEEN '12:00:00' AND '23:59:59')
 				)

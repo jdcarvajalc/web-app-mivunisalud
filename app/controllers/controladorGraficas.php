@@ -20,10 +20,11 @@ $datosY_Humedad_t = json_encode($valoresY_Humedad_t);
 
 echo
 "<script>
-            var diaSeleccionado = " . $diaSeleccionado . ";" .
+        var numeroAreaSeleccionada = " . $area . ";" .
+    "var diaSeleccionado = " . $diaSeleccionado . ";" .
     "var mesSeleccionado = " . $mesSeleccionado . ";" .
     "var anioSeleccionado = " . $anioSeleccionado . ";
-		</script>";
+    </script>";
 
 ?>
 
@@ -95,6 +96,9 @@ echo
 </script>
 
 <script>
+    var areaSeleccionada;
+    (numeroAreaSeleccionada == 1) ? areaSeleccionada = "Almacenamiento": areaSeleccionada = "Dispensación";
+    document.getElementById('presentarArea').innerHTML = areaSeleccionada;
     document.getElementById("presentarDia").innerHTML = diaSeleccionado;
     document.getElementById("presentarMes").innerHTML = mesSeleccionado;
     document.getElementById("presentarAnio").innerHTML = anioSeleccionado;

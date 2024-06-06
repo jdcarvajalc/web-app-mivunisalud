@@ -4,7 +4,7 @@ require_once 'app/config/config.php';
 
 $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
-$sql = "SELECT hora, temp, fecha 
+$sql = "SELECT hora, temp, fecha, area 
 			FROM registros 
 			WHERE MONTH(fecha) = '$mesSeleccionado'
 			AND YEAR(fecha) = '$anioSeleccionado'

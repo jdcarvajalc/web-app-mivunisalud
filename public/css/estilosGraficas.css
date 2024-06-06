@@ -20,17 +20,15 @@ main {
     background-color: white;
     border-radius: 10px;
     border: 0.001px solid rgba(128, 128, 128, 0.3);
-    margin-top: -8px;
-    margin-left: 280px;
-    margin-right: 280px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    margin: -8px 50px 0 50px;
+    padding: 10px 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     font-size: 20px;
     color: #1f77b4;
 }
+
 .etiqueta-select {
     font-weight: bold;
     margin-right: 20px;
@@ -63,6 +61,17 @@ input[type="month"] {
 .calendar-picker-indicator {
     color: #0b2236;
 }
+
+select {
+    margin-left: 20px;
+    color: #0e2a47;
+    font-weight: bold;
+    border: 2px solid;
+    border-radius: 10px;
+    border-color: #0e2a47;
+    padding: 7.5px;
+}
+
 .consulta {
     background-color: white;
     color: #0b2236;
