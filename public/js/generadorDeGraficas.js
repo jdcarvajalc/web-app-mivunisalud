@@ -1,12 +1,12 @@
-function generarGraficasTemp(valoresX, valoresY, nombre){
+function generarGraficasTemp(valoresX, valoresY, nombre) {
     var trace1 = {
         x: valoresX,
         y: valoresY,
-        mode: 'lines+markers',
+        mode: "lines+markers",
         name: nombre,
         line: {
             width: 2,
-            color: '#005d99'
+            color: "#005d99",
         },
     };
 
@@ -19,12 +19,12 @@ function generarGraficasTemp(valoresX, valoresY, nombre){
     var trace2 = {
         x: valoresX,
         y: limiteSuperior,
-        mode: 'lines',
-        name: 'Límite Superior 30°C',
+        mode: "lines",
+        name: "Límite Superior 30°C",
         line: {
-            width: .4,
-            color: '#E40C7B'
-        }
+            width: 0.4,
+            color: "#E40C7B",
+        },
     };
 
     // Agregar una nueva trace para graficar una línea recta como límite superior a 30
@@ -36,29 +36,29 @@ function generarGraficasTemp(valoresX, valoresY, nombre){
     var trace3 = {
         x: valoresX,
         y: limiteInferior,
-        mode: 'lines',
-        name: 'Límite Inferior 8°C',
+        mode: "lines",
+        name: "Límite Inferior 8°C",
         line: {
-            width: .4,
-            color: '#E40C7B '
-        }
+            width: 0.4,
+            color: "#E40C7B ",
+        },
     };
 
-    let  data = [trace1, trace2, trace3];
+    let data = [trace1, trace2, trace3];
     return data;
-};
+}
 
-function generarGraficasHum(valoresX, valoresY, nombre){
+function generarGraficasHum(valoresX, valoresY, nombre) {
     var trace1 = {
         x: valoresX,
         y: valoresY,
-		mode: 'lines+markers',
-        type: 'scatter',
+        mode: "lines+markers",
+        type: "scatter",
         name: nombre,
-		line: {
-			with: 2,
-			color: '005d99',
-		},
+        line: {
+            with: 2,
+            color: "005d99",
+        },
     };
 
     var limiteSuperior = [];
@@ -69,12 +69,12 @@ function generarGraficasHum(valoresX, valoresY, nombre){
     var trace2 = {
         x: valoresX,
         y: limiteSuperior,
-        mode: 'lines',
-        name: 'Límite Superior 70%',
+        mode: "lines",
+        name: "Límite Superior 70%",
         line: {
-            width: .4,
-            color: '#E40C7B'
-        }
+            width: 0.4,
+            color: "#E40C7B",
+        },
     };
 
     var limiteInferior = [];
@@ -85,105 +85,105 @@ function generarGraficasHum(valoresX, valoresY, nombre){
     var trace3 = {
         x: valoresX,
         y: limiteInferior,
-        mode: 'lines',
-        name: 'Límite Inferior 40%',
+        mode: "lines",
+        name: "Límite Inferior 40%",
         line: {
-            width: .4,
-            color: '#E40C7B'
-        }
+            width: 0.4,
+            color: "#E40C7B",
+        },
     };
-    
+
     let data = [trace1, trace2, trace3];
-    return data
-};
+    return data;
+}
 
-function generarLayoutTemp(textoTitulo){
+function generarLayoutTemp(textoTitulo) {
     let layout = {
         showlegend: false,
-        title:{
+        title: {
             text: textoTitulo,
-            font:{
-                family: 'Montserrat',
+            font: {
+                family: "Montserrat",
                 size: 25,
-                color: '#E40C7B',
-                weight: 'bold'
-            }
+                color: "#E40C7B",
+                weight: "bold",
+            },
         },
         xaxis: {
-            type: 'date',
-            tickmode: 'day',
+            type: "date",
+            tickmode: "day",
             dtick: 86400000, // Un día en milisegundos
             title: {
-                text:'FECHAS',
-                font:{
-                    family: 'Montserrat',    
-                    color: '#E40C7B',
-                }
+                text: "FECHAS",
+                font: {
+                    family: "Montserrat",
+                    color: "#E40C7B",
+                },
             },
             // ticktext: textValues,
         },
         yaxis: {
-            title:{
-                text: 'TEMPERATURA [ °C ]',
-                font:{
-                    family: 'Montserrat',    
-                    color: '#E40C7B',
-                }
+            title: {
+                text: "TEMPERATURA [ °C ]",
+                font: {
+                    family: "Montserrat",
+                    color: "#E40C7B",
+                },
             },
-            range: [5, 35] // Ajustar el rango para mostrar la línea recta como límite superior
-        }
+            range: [5, 35], // Ajustar el rango para mostrar la línea recta como límite superior
+        },
     };
     return layout;
-};
+}
 
-function generarLayoutHum(textoTitulo){
+function generarLayoutHum(textoTitulo) {
     let layout = {
         showlegend: false,
-        title:{
+        title: {
             text: textoTitulo,
-            font:{
-                family: 'Montserrat',
+            font: {
+                family: "Montserrat",
                 size: 25,
-                color: '#E40C7B',
-                weight: 'bold'
-            }
+                color: "#E40C7B",
+                weight: "bold",
+            },
         },
         xaxis: {
-            type: 'date',
-            tickmode: 'day',
+            type: "date",
+            tickmode: "day",
             dtick: 86400000, // Un día en milisegundos
             title: {
-                text:'FECHAS',
-                font:{
-                    family: 'Montserrat',    
-                    color: '#E40C7B',
-                }
+                text: "FECHAS",
+                font: {
+                    family: "Montserrat",
+                    color: "#E40C7B",
+                },
             },
             // ticktext: textValues,
         },
         yaxis: {
-            title:{
-                text: 'HUMEDAD [ % ]',
-                font:{
-                    family: 'Montserrat',    
-                    color: '#E40C7B',
-                }
+            title: {
+                text: "HUMEDAD [ % ]",
+                font: {
+                    family: "Montserrat",
+                    color: "#E40C7B",
+                },
             },
-            range: [35, 75] // Ajustar el rango para mostrar la línea recta como límite superior
-        }
+            range: [35, 75], // Ajustar el rango para mostrar la línea recta como límite superior
+        },
     };
     return layout;
-};
+}
 
-function generarGraficasTemp_Diarias(valoresX, valoresY, nombre){
+function generarGraficasTemp_Diarias(valoresX, valoresY, nombre) {
     var trace1 = {
         x: valoresX,
         y: valoresY,
-        mode: 'lines+markers',
+        mode: "lines+markers",
         name: nombre,
         line: {
             width: 2,
-            color: '#005d99'
+            color: "#005d99",
         },
     };
 
@@ -196,12 +196,12 @@ function generarGraficasTemp_Diarias(valoresX, valoresY, nombre){
     var trace2 = {
         x: valoresX,
         y: limiteSuperior,
-        mode: 'lines',
-        name: 'Límite Superior 30°C',
+        mode: "lines",
+        name: "Límite Superior 30°C",
         line: {
-            width: .4,
-            color: '#E40C7B'
-        }
+            width: 0.4,
+            color: "#E40C7B",
+        },
     };
 
     // Agregar una nueva trace para graficar una línea recta como límite superior a 30
@@ -213,30 +213,29 @@ function generarGraficasTemp_Diarias(valoresX, valoresY, nombre){
     var trace3 = {
         x: valoresX,
         y: limiteInferior,
-        mode: 'lines',
-        name: 'Límite Inferior 8°C',
+        mode: "lines",
+        name: "Límite Inferior 8°C",
         line: {
-            width: .4,
-            color: '#E40C7B '
-        }
+            width: 0.4,
+            color: "#E40C7B ",
+        },
     };
 
     var data = [trace1, trace2, trace3];
     return data;
-};
+}
 
-function generarGraficasHum_Diarias(valoresX, valoresY, nombre){
-
+function generarGraficasHum_Diarias(valoresX, valoresY, nombre) {
     var trace1 = {
         x: valoresX,
         y: valoresY,
-		mode: 'lines+markers',
-        type: 'scatter',
+        mode: "lines+markers",
+        type: "scatter",
         name: nombre,
-		line: {
-			with: 2,
-			color: '#005d99',
-		},
+        line: {
+            with: 2,
+            color: "#005d99",
+        },
     };
 
     var limiteSuperior = [];
@@ -247,12 +246,12 @@ function generarGraficasHum_Diarias(valoresX, valoresY, nombre){
     var trace2 = {
         x: valoresX,
         y: limiteSuperior,
-        mode: 'lines',
-        name: 'Límite Superior 70%',
+        mode: "lines",
+        name: "Límite Superior 70%",
         line: {
-            width: .4,
-            color: '#E40C7B'
-        }
+            width: 0.4,
+            color: "#E40C7B",
+        },
     };
 
     var limiteInferior = [];
@@ -263,49 +262,49 @@ function generarGraficasHum_Diarias(valoresX, valoresY, nombre){
     var trace3 = {
         x: valoresX,
         y: limiteInferior,
-        mode: 'lines',
-        name: 'Límite Inferior 40%',
+        mode: "lines",
+        name: "Límite Inferior 40%",
         line: {
-            width: .4,
-            color: '#E40C7B'
-        }
+            width: 0.4,
+            color: "#E40C7B",
+        },
     };
-    
-    let data = [trace1, trace2, trace3];
-    return data
-};
 
-function generarLayoutDiarias(textoTitulo, textoYAxis, rango){
+    let data = [trace1, trace2, trace3];
+    return data;
+}
+
+function generarLayoutDiarias(textoTitulo, textoYAxis, rango) {
     let layout = {
         showlegend: false,
-        title:{
-			text: textoTitulo,
-			font:{
-				family: 'Montserrat',
-				size: 25,
-				color: '#E40C7B',
-				bold: true,
-			}
-		},
-		xaxis: {
+        title: {
+            text: textoTitulo,
+            font: {
+                family: "Montserrat",
+                size: 25,
+                color: "#E40C7B",
+                bold: true,
+            },
+        },
+        xaxis: {
             title: {
-				text:'HORAS',
-				font:{
-					family: 'Montserrat',	
-					color: '#E40C7B',
-				}
-			},
+                text: "HORAS",
+                font: {
+                    family: "Montserrat",
+                    color: "#E40C7B",
+                },
+            },
         },
         yaxis: {
-            title:{
-				text: textoYAxis,
-				font:{
-					family: 'Montserrat',	
-					color: '#E40C7B',
-				}
-			},
-			range: rango
-        }
-    }
+            title: {
+                text: textoYAxis,
+                font: {
+                    family: "Montserrat",
+                    color: "#E40C7B",
+                },
+            },
+            range: rango,
+        },
+    };
     return layout;
-};
+}

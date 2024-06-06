@@ -8,17 +8,20 @@ $sql = "SELECT hora,hum,fecha
 			WHERE DAY(fecha) = '$diaSeleccionado'
 			AND MONTH(fecha) = '$mesSeleccionado'
 			AND YEAR(fecha) = '$anioSeleccionado'
+			AND (
+					(TIME(hora) BETWEEN '12:00:00' AND '23:59:59')
+				)
 			ORDER BY hora ";
 
 $result = mysqli_query($conn, $sql);
 
 
-$valoresY_Humedad = array(); //montos
-$valoresX_Humedad = array(); //fechas
+$valoresY_Humedad_t = array(); //montos
+$valoresX_Humedad_t = array(); //fechas
 
 while ($ver = mysqli_fetch_row($result)) {
-	$valoresY_Humedad[] = $ver[1];
-	$valoresX_Humedad[] = $ver[0];
+	$valoresY_Humedad_t[] = $ver[1];
+	$valoresX_Humedad_t[] = $ver[0];
 }
 
 // Cerrar la conexión

@@ -1,57 +1,98 @@
 <?php
 
-    require FROM_PAGES_TO_MODELS . '/modeloGraficasTemperatura.php';
-    require FROM_PAGES_TO_MODELS . '/modeloGraficasHumedad.php';
+require FROM_PAGES_TO_MODELS . '/modeloGraficasTemperaturaManana.php';
+require FROM_PAGES_TO_MODELS . '/modeloGraficasTemperaturaTarde.php';
+require FROM_PAGES_TO_MODELS . '/modeloGraficasHumedadManana.php';
+require FROM_PAGES_TO_MODELS . '/modeloGraficasHumedadTarde.php';
 
-    $datosX_Temperatura = json_encode($valoresX_Temperatura);
-	$datosY_Temperatura = json_encode($valoresY_Temperatura);
+// Codificando los valores en formato JSON para usarlos en el FrontEnd
+$datosX_Temperatura_m = json_encode($valoresX_Temperatura_m);
+$datosY_Temperatura_m = json_encode($valoresY_Temperatura_m);
 
-    $datosX_Humedad = json_encode($valoresX_Humedad);
-	$datosY_Humedad = json_encode($valoresY_Humedad);
+$datosX_Humedad_m = json_encode($valoresX_Humedad_m);
+$datosY_Humedad_m = json_encode($valoresY_Humedad_m);
 
-    echo 
-		"<script>
-            var diaSeleccionado = ". $diaSeleccionado .";".
-		    "var mesSeleccionado = ". $mesSeleccionado . ";".
-		    "var anioSeleccionado = ". $anioSeleccionado . ";
-		</script>"
-	;
+$datosX_Temperatura_t = json_encode($valoresX_Temperatura_t);
+$datosY_Temperatura_t = json_encode($valoresY_Temperatura_t);
+
+$datosX_Humedad_t = json_encode($valoresX_Humedad_t);
+$datosY_Humedad_t = json_encode($valoresY_Humedad_t);
+
+echo
+"<script>
+            var diaSeleccionado = " . $diaSeleccionado . ";" .
+    "var mesSeleccionado = " . $mesSeleccionado . ";" .
+    "var anioSeleccionado = " . $anioSeleccionado . ";
+		</script>";
 
 ?>
 
-<script src=<?php echo FROM_PAGES_TO_JS . '/crearCadenaLineal.js' ?> > </script>
-<script src=<?php echo FROM_PAGES_TO_JS . '/generadorDeGraficas.js' ?> > </script>
+<script src=<?php echo FROM_PAGES_TO_JS . '/crearCadenaLineal.js' ?>> </script>
+<script src=<?php echo FROM_PAGES_TO_JS . '/generadorDeGraficas.js' ?>> </script>
 
-<!-- Generar gráfica de Temperatura -->
+<!-- Generar gráfica de Temperatura Mañana-->
 <script type="text/javascript">
+    datosX_Temperatura_m = crearCadenaLineal('<?php echo $datosX_Temperatura_m ?>');
+    datosY_Temperatura_m = crearCadenaLineal('<?php echo $datosY_Temperatura_m ?>');
 
-    datosX_Temperatura = crearCadenaLineal('<?php echo $datosX_Temperatura ?>');
-    datosY_Temperatura = crearCadenaLineal('<?php echo $datosY_Temperatura ?>');
+    var data = generarGraficasTemp_Diarias(datosX_Temperatura_m, datosY_Temperatura_m, 'temp');
 
-    var data = generarGraficasTemp_Diarias(datosX_Temperatura, datosY_Temperatura, 'temp');
+    var layout = generarLayoutDiarias("GRÁFICAS DIARIAS TEMPERATURA - MAÑANA", "TEMPERATURA [ °C ]", [5, 35])
 
-    var layout = generarLayoutDiarias("GRÁFICAS DIARIAS TEMPERATURA", "TEMPERATURA [ °C ]", [5, 35])
+    var config = {
+        responsive: true
+    };
 
-    var config = {responsive: true};
-
-    Plotly.newPlot('cargaLineal', data,layout,config);
-
+    Plotly.newPlot('cargaLineal', data, layout, config);
 </script>
 
-<!-- Generar gráfica de Humedad -->
+<!-- Generar gráfica de Temperatura Tarde-->
 <script type="text/javascript">
+    datosX_Temperatura_t = crearCadenaLineal('<?php echo $datosX_Temperatura_t ?>');
+    datosY_Temperatura_t = crearCadenaLineal('<?php echo $datosY_Temperatura_t ?>');
 
-    datosX_Humedad=crearCadenaLineal('<?php echo $datosX_Humedad ?>');
-	datosY_Humedad=crearCadenaLineal('<?php echo $datosY_Humedad ?>');
+    var data = generarGraficasTemp_Diarias(datosX_Temperatura_t, datosY_Temperatura_t, 'temp');
 
-    var data = generarGraficasHum_Diarias(datosX_Humedad, datosY_Humedad, "hum");
+    var layout = generarLayoutDiarias("GRÁFICAS DIARIAS TEMPERATURA - TARDE", "TEMPERATURA [ °C ]", [5, 35])
 
-    var layout = generarLayoutDiarias("GRÁFICAS DIARIAS HUMEDAD", "HUMEDAD [ % ]", [35, 75])
+    var config = {
+        responsive: true
+    };
 
-    var config = {responsive: true};
+    Plotly.newPlot('cargaLineal3', data, layout, config);
+</script>
 
-	Plotly.newPlot('cargaLineal2', data,layout,config);
-</script> 
+<!-- Generar gráfica de Humedad Mañana-->
+<script type="text/javascript">
+    datosX_Humedad_m = crearCadenaLineal('<?php echo $datosX_Humedad_m ?>');
+    datosY_Humedad_m = crearCadenaLineal('<?php echo $datosY_Humedad_m ?>');
+
+    var data = generarGraficasHum_Diarias(datosX_Humedad_m, datosY_Humedad_m, "hum");
+
+    var layout = generarLayoutDiarias("GRÁFICAS DIARIAS HUMEDAD - MAÑANA", "HUMEDAD [ % ]", [35, 75])
+
+    var config = {
+        responsive: true
+    };
+
+    Plotly.newPlot('cargaLineal2', data, layout, config);
+</script>
+
+<!-- Generar gráfica de Humedad Tarde-->
+<script type="text/javascript">
+    datosX_Humedad_t = crearCadenaLineal('<?php echo $datosX_Humedad_t ?>');
+    datosY_Humedad_t = crearCadenaLineal('<?php echo $datosY_Humedad_t ?>');
+
+    var data = generarGraficasHum_Diarias(datosX_Humedad_t, datosY_Humedad_t, "hum");
+
+    var layout = generarLayoutDiarias("GRÁFICAS DIARIAS HUMEDAD - TARDE", "HUMEDAD [ % ]", [35, 75])
+
+    var config = {
+        responsive: true
+    };
+
+    Plotly.newPlot('cargaLineal4', data, layout, config);
+</script>
 
 <script>
     document.getElementById("presentarDia").innerHTML = diaSeleccionado;
