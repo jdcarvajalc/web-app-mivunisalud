@@ -7,6 +7,8 @@ $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 $sql = "SELECT hora, temp, fecha 
 			FROM registros 
 			WHERE MONTH(fecha) = '$mesSeleccionado'
+			AND YEAR(fecha) = '$anioSeleccionado'
+			AND area = '$area'
 			-- RECORDAR SEPARAR MAÑANA Y TARDE
 			AND (
 					(TIME(hora) BETWEEN '14:55:00' AND '15:05:00')
