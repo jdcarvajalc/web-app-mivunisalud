@@ -34,8 +34,8 @@ const generarPDF = (grafica, tipo, horario) => {
         pdf.addImage(imgData, "PNG", 25, 60, 600, 350);
 
         var img2 = new Image();
-        // img2.src = "../../../public/images/Logo-pdf.png";
-        img2.src = "../web-app-mivunisalud/public/images/Logo-pdf.png";
+        img2.src = "../../../public/images/Logo-pdf.png";
+        // img2.src = "../web-app-mivunisalud/public/images/Logo-pdf.png";
         pdf.addImage(img2, "png", 40, 20, 80, 30);
 
         // Cabecera títulos
