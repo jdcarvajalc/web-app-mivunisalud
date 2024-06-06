@@ -25,7 +25,7 @@ if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
         <label for="mes-seleccionado" class="etiqueta-select">Seleccione una fecha: </label>
         <input type="month" name="mes" class="mes-seleccionado" id="mes-seleccionado" value="">
         <select class="select" name="area">
-          <option value="" hidden>Seleccione un área</option>
+          <option value="1" hidden>Seleccione un área</option>
           <option value="1">Almacenamiento</option>
           <option value="2">Dispensación</option>
         </select>
@@ -38,6 +38,10 @@ if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
 
     <section class="seccionInformacionFechas">
       <div class="contenedorInformacionFechas">
+        <p class="etiquetaInformacionFechas">
+          Área:
+        </p>
+        <p class="informacionFechas" id="presentarArea"></p>
         <p class="etiquetaInformacionFechas">
           Mes:
         </p>
